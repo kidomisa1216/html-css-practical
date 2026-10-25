@@ -1,0 +1,175 @@
+/*================
+PC、スマホ共通スタイル
+=================*/
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto 0 auto;
+  font-family:"Noto Sans JP", sans-serif;
+  font-size: 18px;
+}
+
+/* ヘッダー全体 */
+header {
+  width: 100%;
+}
+
+/* ヘッダーの中身（ロゴとナビ）を左右に配置 */
+.header-inner {
+  display: flex;
+  justify-content: space-between; /* 左右いっぱいに振り分ける */
+  align-items: center;            /* 上下の中心を揃える */
+  margin: 20px auto;        /* autoで中央寄せ */
+  max-width: 1080px;            /* ここに最大幅を指定 */
+  padding:0 20px ;    /* 画面端に密着しないよう左右にパディング */
+}
+
+/* h1のデフォルト余白をリセット */
+.header-inner h1 {
+  margin: 20px;
+  font-size: 34px;
+}
+
+/* ロゴ「My Profile」の枠線装飾 */
+.header-inner .home {
+  text-decoration: none;
+  color: black;
+  border: 1px solid #000000; /* 黒の細い枠線 */
+  padding: 5px 15px;
+}
+
+
+/* ナビゲーションの文字サイズ */
+#menu {
+  font-size: 34px;
+  padding-right: 20px;
+}
+
+/* ulのリセットと横並び指定 */
+#menu ul {
+  display: flex;
+  list-style: none; /* ドット（点）を消す */
+  padding: 0;
+  margin: 0;
+  gap: 20px;    /* About と Works の間の隙間 */
+}
+
+/* ナビゲーションのリンクの装飾設定 */
+#menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#menu a:hover {
+ text-decoration: underline;
+}
+
+/* メイン画像 */
+
+.mainimg {
+  margin: 0;
+  width: 100%;   /* メイン画像を横枠いっぱいに拡大*/
+  display: block;  /* 画像下の隙間を防ぐおまじない */
+}
+
+/* About */
+h2 {
+  margin: 0;
+  padding: 60px 0 60px 0;
+  text-align: center;
+  font-size: 34px;
+}
+
+.about-inner {
+  padding: 10px;
+  display: flex;         /* プロフ画像とテキストを横並びに */
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 960px;
+}
+
+.circle {
+  border-radius: 50%;       /* プロフ画像を丸くする */
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* works */
+.works-inner {
+  display: flex;
+  flex-wrap:wrap ;
+  justify-content: center;
+  gap: 20px;      /* アイテム間の隙間を一括指定 */
+  margin: 0 auto;
+  max-width: 960px;
+  align-items: flex-start;  /* 各アイテムの上部を揃える */
+}
+
+.item {
+  width: 25%;    /* 3つ並べる場合の幅調整 */
+  height: auto;
+  padding-bottom: 60px;
+}
+
+.item img {
+  width: 100%;   /* アイテム内の画像を親要素に合わせる */
+  height: 200px;  /* ★高さを固定*/
+}
+
+p {
+  font-size: 18px;
+}
+
+.img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+
+
+/* 横幅が767pxまでの場合 */
+@media (max-width:767px) {
+
+
+  .header-inner h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 20px;
+    padding: 30px 0 20px 0;
+  }
+
+  #menu {
+    font-size: 20px;
+    margin-right: 50px;
+  }
+
+  .item {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+}
